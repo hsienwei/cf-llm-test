@@ -11,7 +11,7 @@ export default {
       max_tokens: 2048
     };
     let response = await env.AI.run('@cf/deepseek-ai/deepseek-r1-distill-qwen-32b', simple);
-    tasks.push({ inputs: simple, response });
+    // tasks.push({ inputs: simple, response });
 
 
     return Response.json(response);
