@@ -4,3 +4,7 @@ compatibility_date = "2025-02-20"
 
 [ai]
 binding = "AI" # available in your Worker code on `env.AI`
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
