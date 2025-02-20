@@ -1,27 +1,19 @@
 export default {
   async fetch(request, env) {
-    const tasks = [];
-
 
     // prompt - simple completion style input
     let simple = {
-      prompt: 'Tell me a joke about Cloudflare'
+      messages: [
+        { role: 'system', content: 'You are a helpful assistant. speaking using chinese.' },
+        { role: 'user', content: 'Who won the world series in 2020? NO explanations. NO notes.' }
+      ],
+      stream: false,
+      max_tokens: 2048
     };
     let response = await env.AI.run('@cf/deepseek-ai/deepseek-r1-distill-qwen-32b', simple);
     tasks.push({ inputs: simple, response });
 
 
-    // messages - chat style input
-    let chat = {
-      messages: [
-        { role: 'system', content: 'You are a helpful assistant.' },
-        { role: 'user', content: 'Who won the world series in 2020?' }
-      ]
-    };
-    response = await env.AI.run('@cf/meta/llama-3-8b-instruct', chat);
-    tasks.push({ inputs: chat, response });
-
-
-    return Response.json(tasks);
+    return Response.json(response);
   }
 };

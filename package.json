@@ -1,0 +1,23 @@
+{
+  "name": "cf-llm-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsienwei/cf-llm-test.git"
+  },
+  "author": "hsienwei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hsienwei/cf-llm-test/issues"
+  },
+  "homepage": "https://github.com/hsienwei/cf-llm-test#readme",
+  "devDependencies": {
+    "wrangler": "^3.109.2"
+  }
+}
