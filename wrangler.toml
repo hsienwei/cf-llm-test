@@ -1,3 +1,6 @@
 name = "my-worker"
 main = "index.js"
 compatibility_date = "2025-02-20"
+
+[ai]
+binding = "AI" # available in your Worker code on `env.AI`
