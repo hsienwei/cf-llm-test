@@ -7,7 +7,7 @@ export default {
     let simple = {
       prompt: 'Tell me a joke about Cloudflare'
     };
-    let response = await env.AI.run('@cf/meta/llama-3-8b-instruct', simple);
+    let response = await env.AI.run('@cf/deepseek-ai/deepseek-r1-distill-qwen-32b', simple);
     tasks.push({ inputs: simple, response });
 
 
