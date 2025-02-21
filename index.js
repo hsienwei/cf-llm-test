@@ -1,6 +1,6 @@
 export default {
   async fetch(request, env) {
-    // prompt - simple completion style input
+try {   // prompt - simple completion style input
 
     const requestBody = await request.json()
 
@@ -16,6 +16,9 @@ export default {
     
 
     return Response.json(response);
+    } catch (error) {
+      return Response.json({ error: error.message });
+    }
   }
 };
 // {
